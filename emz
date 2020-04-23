@@ -1,0 +1,311 @@
+<link rel="stylesheet" type="text/css" media="all" href="/bitrix/templates/emzhvt2/css/animate.css">
+
+
+<style>
+    .trubka {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        background-color: yellow;
+        border-radius: 100%;
+        background-image: url("https://mirenergii.nethouse.ru/static/img/0000/0004/0861/40861187.poolep67ra.W400.png");
+        background-size: cover;
+        z-index: 9999;
+        animation-iteration-count: infinite;
+        position: fixed;
+        top: 90%;
+        left: 90%;
+    }
+
+    @media screen and (max-device-width:760px) {
+        .trubka {
+            top: 80%;
+            left: 41%;
+            position: fixed;
+        }
+    }
+
+    @media handheld and (orientation:landscape) {
+
+        .trubka {
+
+            top: 75%;
+            left: 85%;
+            position: fixed;
+        }
+
+
+    }
+
+</style>
+
+
+<div class="trubka option animated wobble">
+
+
+</div>
+
+<style>
+    .mainwindow {
+        font-size: 18px;
+        overflow: hidden;
+        border: 1px solid #000000;
+        position: fixed;
+        margin: 0 auto;
+        max-width: 25%;
+        max-height: 100%;
+        top: 35%;
+        left: 35%;
+        background-image: linear-gradient(rgba(32, 41, 55, 1), rgba(74, 81, 90, 0.7));
+        border-radius: 5px;
+        z-index: 9999;
+    }
+
+    .text {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+
+        position: relative;
+        top: 60px;
+        margin: 0 auto 0 15%;
+        width: 30%;
+        height: 10%;
+
+    }
+
+    input[type="text"]::-webkit-input-placeholder {
+        color: #000000;
+    }
+
+    .submit {
+        position: relative;
+        border-radius: 10px;
+        outline: none;
+        max-width: 30%;
+        max-height: 45px;
+        background-image: linear-gradient(rgba(30, 36, 96, 1), rgba(70, 76, 218, 1));
+        color: #D0FF00;
+        margin: 0 5% 0 auto;
+        font-size: 18px;
+        top: 60px;
+        left: 10%;
+    }
+
+    .submit:hover {
+
+
+        background-image: linear-gradient(rgba(70, 76, 218, 1), rgba(30, 36, 96, 1));
+
+
+    }
+
+    .welcome {
+        text-align: center;
+        position: relative;
+        top: 20px;
+        margin: 0 5px 5px 0;
+        color: white;
+        font-size: 18px;
+    }
+
+    .cross {
+        position: relative;
+        left: 95%;
+        margin-right: 15%;
+        z-index: 9999;
+    }
+
+    .cross:hover {
+
+        color: red;
+
+    }
+
+    .menu {
+
+        position: relative;
+
+        margin: 20% 10% 0 14%;
+
+        max-width: 80%;
+
+    }
+
+    .visible {
+
+
+
+        display: block;
+
+
+
+    }
+
+
+
+    .invisible {
+
+        display: none;
+    }
+
+
+
+
+
+
+    @media screen and (max-device-width:760px) {
+        .mainwindow {
+            font-size: 18px;
+            overflow: hidden;
+            border: 1px solid #000000;
+            position: fixed;
+            margin: 0 auto;
+            max-width: 75%;
+            max-height: 75%;
+            top: 9%;
+            left: 10%;
+
+
+
+        }
+
+        .cross {
+
+            position: absolute;
+            left: 95%;
+            top: 1%;
+            font-size: 16px;
+        }
+
+
+
+
+
+
+        .cross:hover {
+
+            color: red;
+
+        }
+
+
+        .text {
+            font-size: 18px;
+            font-weight: bold;
+
+            color: "red";
+            position: relative;
+            top: 20px;
+            margin: 0 auto 0 5%;
+            width: 30%;
+            height: 10%;
+            font-size: 14px;
+
+        }
+
+        .submit {
+            position: relative;
+            border-radius: 10px;
+            outline: none;
+            max-width: 30%;
+            max-height: 45px;
+            background-color: #00BFFF;
+            margin: 0 10% 0 auto;
+            font-size: 14px;
+            top: 20px;
+            left: 10%;
+        }
+
+        .menu {
+
+            position: relative;
+
+            margin: 5% 10% 0 14%;
+
+            max-width: 80%;
+
+        }
+    }
+
+</style>
+
+
+<div class="container center767">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+
+
+            <div class="container-fluid mainwindow invisible option animated wobble col-md-6 col-sm-6 col-xs-12">
+                <div class="cross   ">
+                    X
+                </div>
+                <div class="welcome">
+                    Оставьте свой номер телефона и укажите причину оставленной заявки и мы Вам перезвоним
+                </div>
+                <form action="http://xn--80aat7ackh1bycv.xn--p1ai/emzlvi/order.php" id="form" class="form-horizontal">
+                    <div class="form-group">
+                        <input class="text" type="text" name="telephone" placeholder="Ваш телефон"> <input class="submit" type="submit" name="sub" placeholder="ВАШ ТЕЛЕФОН" value="Позвонить">
+                    </div>
+
+                    <div id="menu">
+                        <select style="color:red" name="Menu" class="menu" onmousedown="if(this.options[0].value=='0') this.options[0] = null;">
+                            <option value="0" selected="">Не выбрано</option>
+                            <option value="1">Трудоустройство</option>
+                            <option value="2">Покупка лабораторий ЛВИ</option>
+                            <option value="3">Покупка приборов и оборудования</option>
+                            <option value="4">Покупка средств индивидуальной защиты</option>
+                            <option value="5">Справочная информация</option>
+                        </select>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var wrap = document.getElementsByClassName("trubka")[0];
+    wrap.onclick = function(e) {
+
+        document.getElementsByClassName("mainwindow")[0].className = "mainwindow visible";
+
+
+
+    }
+
+
+    var cross = document.getElementsByClassName("cross")[0];
+    cross.onclick = function(e) {
+        document.getElementsByClassName("mainwindow")[0].className = "mainwindow invisible";
+
+
+    }
+
+    var p = document.createElement("p");
+    form.onsubmit = function() {
+        if
+
+
+        (((document.getElementsByClassName("menu")[0].options[0].selected == true)) || (document.getElementsByClassName("text")[0].value == false)) {
+
+            p.innerHTML = "ОБЯЗАТЕЛЬНО укажите ПРИЧИНУ заявки";
+            p.style.color = "red";
+            p.style.margin = "0 auto";
+            p.style.textAlign = "center";
+            p.style.fontSize = "18px";
+            menu.appendChild(p);
+            return false;
+        }
+    }
+
+    setInterval(function() {
+        if (screen.width == 900) {
+
+            cross.innerHTML = '0';
+
+        }
+    }, 500);
+
+</script>
